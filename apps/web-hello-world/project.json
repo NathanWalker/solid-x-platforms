@@ -1,0 +1,57 @@
+{
+  "name": "web-hello-world",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/web-hello-world/src",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "apps/web-hello-world",
+        "command": "solid-start build"
+      },
+      "configurations": {
+        "development": {
+          "mode": "development"
+        },
+        "production": {
+          "mode": "production"
+        }
+      }
+    },
+    "serve": {
+      "executor": "nx:run-commands",
+      "defaultConfiguration": "development",
+      "options": {
+        "cwd": "apps/web-hello-world",
+        "command": "solid-start dev"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "web-hello-world:build:development",
+          "hmr": true
+        },
+        "production": {
+          "buildTarget": "web-hello-world:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "test": {
+      "executor": "@nx/vite:test",
+      "outputs": ["{options.reportsDirectory}"],
+      "options": {
+        "passWithNoTests": true,
+        "reportsDirectory": "../../coverage/apps/web-hello-world"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/web-hello-world/**/*.ts"]
+      }
+    }
+  }
+}

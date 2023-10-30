@@ -1,0 +1,63 @@
+{
+  "name": "nativescript-hello-world",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/nativescript-hello-world/src",
+  "projectType": "application",
+  "targets": {
+    "ios": {
+      "executor": "@nativescript/nx:build",
+      "options": {
+        "platform": "ios",
+        "noHmr": true
+      },
+      "configurations": {
+        "build": {
+          "copyTo": "./dist/build.ipa"
+        },
+        "prod": {
+          "combineWithConfig": "build:prod"
+        }
+      }
+    },
+    "vision": {
+			"executor": "@nativescript/nx:build",
+			"inputs": ["default", "^production"],
+			"outputs": [],
+			"options": {
+        "platform": "vision",
+				"noHmr": true,
+				"debug": false
+			}
+		},
+    "android": {
+      "executor": "@nativescript/nx:build",
+      "options": {
+        "platform": "android",
+        "noHmr": true
+      },
+      "configurations": {
+        "build": {
+          "copyTo": "./dist/build.apk"
+        },
+        "prod": {
+          "combineWithConfig": "build:prod"
+        }
+      }
+    },
+    "clean": {
+      "executor": "@nativescript/nx:build",
+      "options": {
+        "clean": true
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "apps/nativescript-hello-world/**/*.ts",
+          "apps/nativescript-hello-world/src/**/*.html"
+        ]
+      }
+    }
+  }
+}

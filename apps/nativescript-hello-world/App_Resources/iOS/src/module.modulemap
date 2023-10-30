@@ -1,0 +1,4 @@
+module NativeScriptStartStub {
+    header "NativeScriptStart.h"
+    export *
+}
