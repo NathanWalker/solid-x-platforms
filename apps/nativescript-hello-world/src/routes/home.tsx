@@ -16,7 +16,7 @@ export const Home = () => {
           row="2"
           className="rounded-full bg-blue-500 text-white w-[300] p-3 text-2xl font-bold text-center capitalize mt-10"
           iosOverflowSafeArea="false"
-          text="Navigate to Settings"
+          text="Navigate to About"
           on:tap={() => {
             router.navigate(
               'Settings',

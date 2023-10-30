@@ -4,7 +4,7 @@ export const Settings = () => {
   const router = useRouter();
   return (
     <>
-      <actionbar title="Settings" />
+      <actionbar title="About" />
       <gridlayout rows="*,auto,auto,*">
         
         <button
