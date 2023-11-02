@@ -13,7 +13,8 @@
     "paths": {
       "~/*": ["src/*"],
       "@/*": ["src/*"],
-      "@solid-x-platforms/components": ["../../packages/components/src/index.ts"]
+      "@solid-x-platforms/components": ["../../packages/components/src/index.ts"],
+      "@solid-x-platforms/utils": ["../../packages/utils/src/index.ts"]
     },
     "allowJs": true,
     "types": [

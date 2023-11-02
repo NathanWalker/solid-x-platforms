@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@solid-x-platforms/components": ["packages/components/src/index.ts"]
+      "@solid-x-platforms/components": ["packages/components/src/index.ts"],
+      "@solid-x-platforms/utils": ["packages/utils/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

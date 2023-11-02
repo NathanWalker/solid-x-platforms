@@ -10,6 +10,10 @@ module.exports = (env) => {
       '@solid-x-platforms/components',
       resolve(__dirname, '../../packages/components/src/')
     );
+    config.resolve.alias.set(
+      '@solid-x-platforms/utils',
+      resolve(__dirname, '../../packages/utils/src/')
+    );
   });
   return webpack.resolveConfig();
 };
