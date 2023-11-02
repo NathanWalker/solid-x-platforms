@@ -33,6 +33,8 @@ class EarthEntity: Entity {
     /// A container for artificial satellites.
     private let satellites = Entity()
 
+    private var entityName: String? = nil
+
     // MARK: - Internal state
 
     /// Keep track of solar intensity and only update when it changes.
@@ -59,13 +61,16 @@ class EarthEntity: Entity {
     init(
         configuration: Configuration,
         satelliteConfiguration: [SatelliteEntity.Configuration],
-        moonConfiguration: SatelliteEntity.Configuration?
+        moonConfiguration: SatelliteEntity.Configuration?,
+        entityName: String?
     ) async {
         super.init()
 
+        self.entityName = entityName
+
         // Load the earth and pole models.
-        guard let earth = await WorldAssets.entity(named: configuration.isCloudy ? "Earth" : "Globe"),
-              let pole = await WorldAssets.entity(named: "Pole") else { return }
+        guard let earth = await WorldAssets.entity(named: entityName != nil ? entityName! : (configuration.isCloudy ? "Earth" : "Globe")),
+               let pole = await WorldAssets.entity(named: "Pole") else { return }
         self.earth = earth
         self.pole = pole
 
@@ -177,7 +182,7 @@ class EarthEntity: Entity {
         // Scale and position the entire entity.
         move(
             to: Transform(
-                scale: SIMD3(repeating: configuration.scale),
+                scale: SIMD3(repeating: self.entityName == "Solid" ? 8.0 : configuration.scale),
                 rotation: orientation,
                 translation: configuration.position),
             relativeTo: parent)
@@ -208,7 +213,11 @@ class EarthEntity: Entity {
         axComponent.isAccessibilityElement = true
 
         // Add a label.
-        axComponent.label = "Earth model"
+        if (self.entityName == "Solid") {
+            axComponent.label = "Solid model"
+        } else {
+            axComponent.label = "Earth model"
+        }
 
         // Add a value that describes the model's current state.
         var axValue = configuration.currentSpeed != 0 ? "Rotating, " : "Not rotating, "

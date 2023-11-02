@@ -101,14 +101,14 @@ private struct GlobeTiltPicker: View {
 
 extension HorizontalAlignment {
     /// A custom alignment to center the tilt menu over its button.
-    private struct TiltButtonAlignment: AlignmentID {
+    struct TiltButtonAlignment: AlignmentID {
         static func defaultValue(in context: ViewDimensions) -> CGFloat {
             context[HorizontalAlignment.center]
         }
     }
 
     /// A custom alignment guide to center the tilt menu over its button.
-    fileprivate static let tiltButtonGuide = HorizontalAlignment(
+    static let tiltButtonGuide = HorizontalAlignment(
         TiltButtonAlignment.self
     )
 }

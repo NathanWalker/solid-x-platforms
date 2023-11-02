@@ -8,7 +8,7 @@ export const Home = () => {
   return (
     <>
       <actionbar title="Home" />
-      <gridlayout rows="*,auto,auto,auto,*">
+      <gridlayout rows="*,auto,auto,auto,auto,*">
         <stacklayout row="1">
           <Counter />
         </stacklayout>
@@ -41,12 +41,21 @@ export const Home = () => {
           <swiftui
             row="3"
             swiftId="toggle3D"
+            data={{ type: 'solid', title: 'Solid 3D', typeId: 'Solid' }}
+            className="h-center h-[50] mt-10"
+          />
+        )}
+        {global.isVisionOS && (
+          <swiftui
+            row="4"
+            swiftId="toggle3D"
+            data={{ type: 'globe', title: 'View Globe', typeId: 'Globe' }}
             className="h-center h-[50] mt-10"
           />
         )}
 
         <image
-          rowSpan="5"
+          rowSpan="6"
           src="~/assets/solid.png"
           width="100"
           height="100"

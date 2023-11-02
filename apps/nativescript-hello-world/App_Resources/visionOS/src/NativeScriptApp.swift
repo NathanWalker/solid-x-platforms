@@ -18,6 +18,14 @@ struct NativeScriptApp: App {
         }
         .windowStyle(.volumetric)
         .defaultSize(width: 0.6, height: 0.6, depth: 0.6, in: .meters)
+
+        // A volume that displays Solid logo.
+        WindowGroup(id: "Solid") {
+            Solid()
+                .environment(model)
+        }
+        .windowStyle(.volumetric)
+        .defaultSize(width: 0.6, height: 0.6, depth: 0.6, in: .meters)
     }
 
     init() {
