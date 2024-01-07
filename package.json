@@ -19,9 +19,9 @@
     "@nativescript/core": "vision",
     "@nativescript/swift-ui": "vision",
     "solid-js": "^1.8.4",
-    "solid-start": "^0.3.8",
-    "solid-start-netlify": "^0.3.8",
-    "tslib": "^2.3.0"
+    "solid-start": "^0.3.10",
+    "solid-start-netlify": "^0.3.10",
+    "tslib": "^2.6.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.5",
