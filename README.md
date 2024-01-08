@@ -1,3 +1,5 @@
+<img src="solid.png" width="150" height="150" alt="SolidJS Logo" />
+
 Solid running on Web, iOS, Android and Vision Pro.
 
 ## Setup
