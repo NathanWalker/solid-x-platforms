@@ -18,7 +18,13 @@
     "noUnusedParameters": true,
     "noImplicitReturns": true,
     "skipLibCheck": true,
-    "types": ["vite/client", "vitest"]
+    "types": ["vite/client", "vitest"],
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["src/*"],
+      "@solid-x-platforms/components": ["../../packages/components/src/index.ts"],
+      "@solid-x-platforms/utils": ["../../packages/utils/src/index.ts"]
+    }
   },
   "include": ["src"],
   "references": [

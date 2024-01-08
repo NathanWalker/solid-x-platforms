@@ -9,7 +9,7 @@
       "executor": "nx:run-commands",
       "options": {
         "cwd": "apps/web-hello-world",
-        "command": "solid-start build"
+        "command": "vinxi build"
       },
       "configurations": {
         "development": {
@@ -25,7 +25,7 @@
       "defaultConfiguration": "development",
       "options": {
         "cwd": "apps/web-hello-world",
-        "command": "solid-start dev"
+        "command": "vinxi dev"
       },
       "configurations": {
         "development": {
@@ -48,10 +48,7 @@
     },
     "lint": {
       "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": ["apps/web-hello-world/**/*.ts"]
-      }
+      "outputs": ["{options.outputFile}"]
     }
   }
 }

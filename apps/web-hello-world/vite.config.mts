@@ -1,7 +1,5 @@
-import solid from 'solid-start/vite';
-import { defineConfig } from 'vite';
+import { defineConfig } from '@solidjs/start/config';
 import viteTsConfigPaths from 'vite-tsconfig-paths';
-import netlify from 'solid-start-netlify';
 
 export default defineConfig({
   cacheDir: '../../node_modules/.vite/web-hello-world',
@@ -14,9 +12,6 @@ export default defineConfig({
   plugins: [
     viteTsConfigPaths({
       root: '../../',
-    }),
-    solid({
-      adapter: netlify({ edge: true }),
-    }),
+    })
   ],
 });

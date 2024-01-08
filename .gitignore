@@ -41,7 +41,6 @@ Thumbs.db
 .nx/cache
 
 # Dist output
-apps/web-hello-world/netlify
 apps/web-hello-world/dist
 apps/web-hello-world/.solid
 

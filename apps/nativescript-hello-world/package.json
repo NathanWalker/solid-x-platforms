@@ -11,16 +11,16 @@
   },
   "dependencies": {
     "@nativescript-community/ui-collectionview": "^5.3.2",
-    "@nativescript-community/solid-js": "^0.0.4-alpha.5",
+    "@nativescript-community/solid-js": "^0.0.5",
     "@nativescript/core": "vision",
     "@nativescript/swift-ui": "vision",
     "@nativescript/tailwind": "*",
-    "solid-navigation": "^1.0.0-alpha.8"
+    "solid-navigation": "^1.0.0-alpha.11"
   },
   "devDependencies": {
     "@nativescript/android": "~8.6.0",
     "@nativescript/ios": "~8.6.0",
     "@nativescript/visionos": "~8.6.0",
-    "typescript": "~5.2.0"
+    "typescript": "~5.3.0"
   }
 }

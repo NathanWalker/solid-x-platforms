@@ -1,4 +1,4 @@
-import { A } from 'solid-start';
+import { A } from "@solidjs/router";
 import { Counter } from '@solid-x-platforms/components';
 
 export default function Home() {
@@ -9,22 +9,22 @@ export default function Home() {
       </h1>
       <Counter />
       <p class="mt-8">
-        Visit{' '}
+        Visit{" "}
         <a
           href="https://solidjs.com"
           target="_blank"
           class="text-sky-600 hover:underline"
         >
           solidjs.com
-        </a>{' '}
+        </a>{" "}
         to learn how to build Solid apps.
       </p>
       <p class="my-4">
         <span>Home</span>
-        {' - '}
+        {" - "}
         <A href="/about" class="text-sky-600 hover:underline">
           About Page
-        </A>{' '}
+        </A>{" "}
       </p>
     </main>
   );
