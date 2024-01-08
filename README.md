@@ -1,6 +1,8 @@
-<img src="solid.png" width="150" height="150" alt="SolidJS Logo" />
+<img src="[solid.png](https://github.com/NathanWalker/solid-x-platforms/blob/main/solid.png)" width="150" height="150" alt="SolidJS Logo" />
 
 Solid running on Web, iOS, Android and Vision Pro.
+
+https://github.com/NathanWalker/solid-x-platforms/assets/457187/a379a7ef-2bf8-437a-96d2-bb382320f5b5
 
 ## Setup
 
