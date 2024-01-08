@@ -1,4 +1,4 @@
-<img src="[solid.png](https://github.com/NathanWalker/solid-x-platforms/blob/main/solid.png)" width="150" height="150" alt="SolidJS Logo" />
+<img src="[solid.png](https://github.com/NathanWalker/solid-x-platforms/blob/main/solid.png?raw=true)" width="150" height="150" alt="SolidJS Logo" />
 
 Solid running on Web, iOS, Android and Vision Pro.
 
