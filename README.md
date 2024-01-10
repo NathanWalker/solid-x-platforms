@@ -13,6 +13,7 @@ Prerequisites:
 - [Xcode 15.2 Installed for Vision Pro Simulator](https://developer.apple.com/download/applications/)
 - [Download SwiftPackages here](https://drive.google.com/file/d/17wFGXOBqeXgs7mhFZ-wfg4ogHyRYlYCR/view?usp=sharing)
   - **Important for visionOS**: Once unzipped, place the folder at `apps/nativescript-hello-world/SwiftPackages`
+- This repo uses [yarn](https://classic.yarnpkg.com/lang/en/) largely to share dependencies between the root and `apps/nativescript-hello-world` better however it can be switched to `pnpm`, `npm`, or even `bun`.
 
 ```bash
 yarn setup
